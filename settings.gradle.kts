@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ca-domain"
 include(":app")
+include(":domain")

@@ -2,4 +2,7 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+
+    id("com.vanniktech.maven.publish") version "0.28.0" // 대체 플러그인
 }
