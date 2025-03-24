@@ -6,4 +6,7 @@ plugins {
 
     // 참고 : https://cocoslime.github.io/blog/Android-Library-Maven-Central/
     alias(libs.plugins.maven.publish) apply false // 대체 플러그인
+
+    // Testing
+    alias(libs.plugins.junit5.robolectric) apply false
 }

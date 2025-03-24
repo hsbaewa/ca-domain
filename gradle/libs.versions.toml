@@ -9,6 +9,14 @@ kotlin = "2.1.10"
 # Maven Central #
 maven-publish = "0.28.0"
 
+# Clean Architecture #
+ca-domain = "0.0.1"
+
+# Testing #
+kover = "0.8.3"
+ui-test = "1.7.7"
+junit5-robolectric = "0.9.0"
+
 agp = "8.5.2"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -22,6 +30,13 @@ material = "1.10.0"
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutineVersion" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineVersion" }
 
+# Clean Architecture #
+ca-domain = { group = "io.github.hsbaewa", name = "ca-domain", version.ref = "ca-domain" }
+
+# Testing #
+ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4-android", version.ref = "ui-test" }
+ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "ui-test" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -32,6 +47,10 @@ material = { group = "com.google.android.material", name = "material", version.r
 [plugins]
 # Maven Central #
 maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+
+# Testing #
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+junit5-robolectric = { id = "tech.apter.junit5.jupiter.robolectric-extension-gradle-plugin", version.ref = "junit5-robolectric" }
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
