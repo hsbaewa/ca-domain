@@ -1,15 +1,27 @@
 [versions]
-agp = "8.5.1"
-kotlin = "1.9.0"
+# Coroutine #
+coroutineVersion = "1.9.0"
+
+# Kotlin #
+jetbrainsKotlinJvm = "2.1.0"
+kotlin = "2.1.10"
+
+# Maven Central #
+maven-publish = "0.28.0"
+
+agp = "8.5.2"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
 material = "1.10.0"
-jetbrainsKotlinJvm = "1.9.0"
 
 [libraries]
+# Coroutine #
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutineVersion" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineVersion" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -18,7 +30,9 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
+# Maven Central #
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
-

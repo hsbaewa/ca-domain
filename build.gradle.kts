@@ -4,5 +4,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 
-    id("com.vanniktech.maven.publish") version "0.28.0" // 대체 플러그인
+    // 참고 : https://cocoslime.github.io/blog/Android-Library-Maven-Central/
+    alias(libs.plugins.maven.publish) apply false // 대체 플러그인
 }
