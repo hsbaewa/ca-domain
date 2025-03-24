@@ -10,7 +10,7 @@ kotlin = "2.1.10"
 maven-publish = "0.28.0"
 
 # Clean Architecture #
-ca-domain = "0.0.1"
+ca-domain = "0.1.0"
 
 # Testing #
 kover = "0.8.3"

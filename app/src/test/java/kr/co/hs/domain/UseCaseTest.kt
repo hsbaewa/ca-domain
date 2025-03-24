@@ -2,7 +2,10 @@ package kr.co.hs.domain
 
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.robolectric.annotation.Config
@@ -26,6 +29,11 @@ class UseCaseTest {
         assertNotNull(usecaseResult)
         val usecaseResultSuccess = usecaseResult?.data
         assertNotNull(usecaseResultSuccess)
+
+        val entityText = usecaseResultSuccess?.text
+        assertEquals("text", entityText)
+        assertTrue(usecaseResultSuccess!!.isCachedData)
+        assertFalse(usecaseResultSuccess.isRemoteData)
     }
 
     @Test

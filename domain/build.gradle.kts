@@ -4,7 +4,10 @@ plugins {
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
 
-    // maven publish
+    // Testing
+    alias(libs.plugins.kover)
+
+    // Maven publish
     alias(libs.plugins.maven.publish)
     id("signing") // GPG 서명을 위한 플러그인 추가
 }
