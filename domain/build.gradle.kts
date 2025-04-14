@@ -23,7 +23,7 @@ dependencies {
 
 // Maven 그룹 및 버전 설정
 group = "io.github.hsbaewa"
-version = "0.1.2"
+version = "0.1.3"
 
 tasks.withType(Javadoc::class) {
     options {
@@ -40,7 +40,7 @@ mavenPublishing {
 //    signAllPublications() // Gpg 서명을 위한 설정
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL) // 포탈로 등록 할거기 때문에 타입 추가
 
-    coordinates("io.github.hsbaewa", "ca-domain", "0.1.2") // 네임 스페이스, 라이브러리 이름, 버전 순서로 작성
+    coordinates("io.github.hsbaewa", "ca-domain", "0.1.3") // 네임 스페이스, 라이브러리 이름, 버전 순서로 작성
 
     // POM 설정
     pom {
